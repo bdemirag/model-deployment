@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MY Web Page</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        button {
+            color: aliceblue;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Machine Learning Deployment</h1>
+    <div>
+        <form method="post"> 
+            <div>
+                <button>ML Model Import</button>
+                <a href="/">Reset</a>
+            </div>
+            
+            <textarea name = "email-content" rows="12" cols="60" name="content" placeholder="Enter your e-mail">{{ text }}</textarea>
+        </form>
+    </div>
+    <h2>{{ text }}</h2>
+</body>
+</html>
