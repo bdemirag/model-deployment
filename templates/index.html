@@ -1,29 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
-    <title>MY Web Page</title>
-    <style>
-        body {
-            text-align: center;
-        }
-        button {
-            color: aliceblue;
-            background-color: blue;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Machine Learning Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
 </head>
+
 <body>
-    <h1>Machine Learning Deployment</h1>
-    <div>
-        <form method="post"> 
-            <div>
-                <button>ML Model Import</button>
-                <a href="/">Reset</a>
-            </div>
-            
-            <textarea name = "email-content" rows="12" cols="60" name="content" placeholder="Enter your e-mail">{{ text }}</textarea>
-        </form>
-    </div>
-    <h2>{{ text }}</h2>
+ <div class="login">
+	<h1>Sigara Tahmini</h1>
+
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="number" name="age" placeholder="age" required="required" />
+        <input type="number" name="bmi" placeholder="bmi" required="required" />
+		<input type="number" name="sex" placeholder="sex" min="0" max="1" required="required" />
+		<input type="number" name="children" placeholder="children" required="children"/>
+        <input type="number" name="region" placeholder="region" min="0" max="3" required="required" />
+        <input type="number" name="charges" placeholder="charges" required="required" />
+
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+ 
 </body>
 </html>
