@@ -1,0 +1,4 @@
+VS Code uygulamasında terminalde "python app.py" komutu ile uygulama çalışması sağlanmaktadır.
+
+Burada da terminalde çıkan localhost linkine tıklandığında arayüz açılmaktadır. 
+
